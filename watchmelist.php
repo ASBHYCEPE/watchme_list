@@ -13,6 +13,7 @@
     <body>
         <header>
             <div id="title-wrapper">
+                <img src="img/logo.png" id="logo" alt="eye logo">
                 <h1>WATCHME <span style="color: #27ae60">LIST</span></h1>
             </div>
         </header>
