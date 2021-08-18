@@ -19,17 +19,17 @@
         </header>
         <div id="container">
             <form action="">
-                <div class="form-item">
+                <div class="col-3">
                     <input type="text"  name="showTitle" required>
                 </div>
-                <div class="form-item">
+                <div class="col-1">
                     <select name="showCategory" >
-                        <option value=0>PLANNED TO WATCH</option>
+                        <option value=0>PLANNING</option>
                         <option value=0>WATCHING</option>
                     </select>
                 </div>
-                <div class="form-item">
-                    <input type="submit" value="submit">
+                <div class="col-1">
+                    <input type="submit" value="ADD SHOW">
                 </div>
             </form>
         </div>

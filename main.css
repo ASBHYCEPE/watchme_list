@@ -4,6 +4,11 @@
     font-family: 'Arimo', sans-serif;
 }
 
+.col-1{width: 25%;}
+.col-2{width: 50%;}
+.col-3{width: 75%;}
+.col-4{width: 100%}
+
 body{
     background-color: #34495e;
 }
@@ -25,6 +30,34 @@ header{
     margin: 0 auto;
 }
 
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+form{
+    padding: 5px;
+    margin-top: 20px;
+    display: flex;
+}
+
+form > div{
+    padding: 10px;
+}
+
 #title-wrapper h1{
     color: white;
     padding-left: 20px;
@@ -33,4 +66,8 @@ header{
 #logo{
     width: 100px;
     height: 50px;
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
 }
