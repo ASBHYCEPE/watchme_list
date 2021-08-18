@@ -25,7 +25,7 @@
                 <div class="col-1">
                     <select name="showCategory" >
                         <option value=0>PLANNING</option>
-                        <option value=0>WATCHING</option>
+                        <option value=1>WATCHING</option>
                     </select>
                 </div>
                 <div class="col-1">
