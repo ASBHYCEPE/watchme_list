@@ -32,9 +32,18 @@ header{
 
 input[type="text"]{
     width: 100%;
-    padding: 10px;
+    padding: 11px;
+    outline: none;
+    border: none;
     font-size: 15px;
+    border-radius: 5px;
 }
+
+input[type="text"]:focus{
+    border: 1px solid #27ae60;
+    padding: 10px;
+}
+
 
 input[type="submit"]{
     width: 100%;
@@ -44,9 +53,10 @@ input[type="submit"]{
 select{
     width: 100%;
     padding: 10px;
+    border-radius: 5px;
     font-size: 15px;
+    outline: none;
 }
-
 
 form{
     padding: 5px;
