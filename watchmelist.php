@@ -20,7 +20,7 @@
         <div id="container">
             <form action="">
                 <div class="col-3">
-                    <input type="text" placeholder="Enter the tile of the show..." name="showTitle" required>
+                    <input type="text" placeholder="Enter the title of the show..." name="showTitle" required>
                 </div>
                 <div class="col-1">
                     <select name="showCategory" >
