@@ -20,6 +20,11 @@ header{
     margin: 0 auto;
 }
 
+#container{
+    width: 60%;
+    margin: 0 auto;
+}
+
 #title-wrapper h1{
     color: white;
     padding-left: 20px;
