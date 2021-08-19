@@ -32,6 +32,18 @@
                     <input type="submit" value="ADD SHOW">
                 </div>
             </form>
+            <div id="category-container">
+                <div class="category-block">
+                    <div class="category-title">
+                        <h2>PLANNED TO WATCH</h2>
+                    </div>
+                </div>
+                <div class="category-block">
+                    <div class="category-title">
+                        <h2>CURRENTLY WATCHING</h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
