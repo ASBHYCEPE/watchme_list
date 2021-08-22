@@ -1,5 +1,20 @@
-<!DOCTYPE html>
+<?php
+    require_once "config.php";
 
+    //Generates random ID for each show
+    function idGenerator(){
+        $num = array("1", "2", "3", "4", "5", "6", "7", "8","9");
+        $generatedID = "";
+
+        for($i = 0; $i<4; $i++){
+            $generatedID .= $num[rand(0, 8)];
+        }
+
+        return $generatedID;
+    }
+?>
+
+<!DOCTYPE html>
 <html>
     <head>
         <title>WATCHME LIST</title>
@@ -18,7 +33,7 @@
             </div>
         </header>
         <div id="container">
-            <form action="">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
                 <div class="col-3">
                     <input type="text" placeholder="Enter the title of the show..." name="showTitle" required>
                 </div>
