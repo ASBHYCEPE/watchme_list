@@ -1,6 +1,18 @@
 <?php
     require_once "config.php";
 
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $showID = idGenerator();
+        $showTitle = $_POST['showTitle'];
+        $showStatus = $_POST['showCategory'];
+        $sql = "INSERT INTO watchlist VALUES(?,?,?)";
+
+        if($stmt = mysqli_prepare($link, $sql)){
+            mysqli_stmt_bind_param($stmt, "ssi", $showID, $showTitle, $showStatus);
+            mysqli_execute($stmt);
+        }
+    }
+
     //Generates random ID for each show
     function idGenerator(){
         $num = array("1", "2", "3", "4", "5", "6", "7", "8","9");
