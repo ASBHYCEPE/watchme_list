@@ -65,11 +65,49 @@
                     <div class="category-title">
                         <h2>PLANNED TO WATCH</h2>
                     </div>
+
+                    <?php
+                        $sql = "SELECT * FROM watchlist WHERE show_status = 0";
+                        $result = mysqli_query($link, $sql);
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<div class=\"category-item\">";
+                            echo "<div class=\"col-3\">";
+                            echo "<h4>".$row['show_title']."</h4>";
+                            echo "</div>";
+                            echo "<div class=\"col-1\">";
+                            echo "<a href=\"\">DROP</a>";
+                            echo "</div>";
+                            echo "<div class=\"col-1\">";
+                            echo "<a href=\"\">WATCH</a>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    ?>
                 </div>
                 <div class="category-block">
                     <div class="category-title">
                         <h2>CURRENTLY WATCHING</h2>
                     </div>
+
+                    <?php
+                        $sql = "SELECT * FROM watchlist WHERE show_status = 1";
+                        $result = mysqli_query($link, $sql);
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<div class=\"category-item\">";
+                            echo "<div class=\"col-3\">";
+                            echo "<h4>".$row['show_title']."</h4>";
+                            echo "</div>";
+                            echo "<div class=\"col-1\">";
+                            echo "<a href=\"\">DROP</a>";
+                            echo "</div>";
+                            echo "<div class=\"col-1\">";
+                            echo "<a href=\"\">FINISH</a>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
