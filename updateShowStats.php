@@ -8,6 +8,7 @@
         mysqli_stmt_bind_param($stmt, "s", $showID);
         mysqli_execute($stmt);
         mysqli_stmt_close($stmt);
+        header("location:watchmelist.php");
     }else{
         echo "ERROR";
     }
