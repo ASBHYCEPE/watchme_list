@@ -9,7 +9,5 @@
         mysqli_execute($stmt);
         mysqli_stmt_close($stmt);
         header("location:watchmelist.php");
-    }else{
-        echo "ERROR";
     }
 ?>
