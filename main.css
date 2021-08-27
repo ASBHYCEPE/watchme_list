@@ -19,14 +19,14 @@ header{
 }
 
 #title-wrapper{
-    width: 60%;
+    width: 70%;
     display: flex;
     align-items: center;
     margin: 0 auto;
 }
 
 #container{
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -97,10 +97,55 @@ form > div{
     grid-column-gap: 10px;
 }
 
-#category-container .category-block{
+#category-container .category-title{
     background-color: #2c3e50;
     border-radius: 10px;
     padding: 10px;
+}
+
+#category-container .category-item{
+    display: flex;
+    padding-right: 5px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#category-container .category-item a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#category-container .category-item h4{
+    text-align: center;
+    color: white;
+}
+
+#category-container .category-item div{
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#category-container .category-item > div:nth-child(1){
+    background-color: #2c3e50;
+}
+
+#category-container .category-item > div:nth-child(2){
+    background-color: tomato;
+}
+
+#category-container .category-item > div:nth-child(2):hover{
+    background-color: red;
+}
+
+#category-container .category-item > div:nth-child(3){
+    background-color: #27ae60;
+}
+
+#category-container .category-item > div:nth-child(3):hover{
+    background-color: green;
 }
 
 #category-container h2{
