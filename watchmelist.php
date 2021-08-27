@@ -76,7 +76,7 @@
                             echo "<h4>".$row['show_title']."</h4>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
-                            echo "<a href=\"\">DROP</a>";
+                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
                             echo "<a href=\"updateShowStats.php?showID=".$row['show_id']."\">WATCH</a>";
@@ -100,10 +100,10 @@
                             echo "<h4>".$row['show_title']."</h4>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
-                            echo "<a href=\"\">DROP</a>";
+                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
-                            echo "<a href=\"".$row['show_id']."\">FINISH</a>";;
+                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">FINISHED</a>";
                             echo "</div>";
                             echo "</div>";
                         }
