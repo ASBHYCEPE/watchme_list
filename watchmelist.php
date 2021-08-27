@@ -79,7 +79,7 @@
                             echo "<a href=\"\">DROP</a>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
-                            echo "<a href=\"\">WATCH</a>";
+                            echo "<a href=\"updateShowStats.php?showID=".$row['show_id']."\">WATCH</a>";
                             echo "</div>";
                             echo "</div>";
                         }
@@ -103,7 +103,7 @@
                             echo "<a href=\"\">DROP</a>";
                             echo "</div>";
                             echo "<div class=\"col-1\">";
-                            echo "<a href=\"\">FINISH</a>";
+                            echo "<a href=\"".$row['show_id']."\">FINISH</a>";;
                             echo "</div>";
                             echo "</div>";
                         }
