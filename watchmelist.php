@@ -25,6 +25,24 @@
 
         return $generatedID;
     }
+
+    //Reads data from the database and display all queried results
+    function displayShowTitles($sql, $link, $label, $phpFileName){
+        $result = mysqli_query($link, $sql);
+        while($row = mysqli_fetch_array($result)){
+            echo "<div class=\"category-item\">";
+            echo "<div class=\"col-3\">";
+            echo "<h4>".$row['show_title']."</h4>";
+            echo "</div>";
+            echo "<div class=\"col-1\">";
+            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
+            echo "</div>";
+            echo "<div class=\"col-1\">";
+            echo "<a href=\"".$phpFileName.".php?showID=".$row['show_id']."\">".$label."</a>";
+            echo "</div>";
+            echo "</div>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -68,21 +86,7 @@
 
                     <?php
                         $sql = "SELECT * FROM watchlist WHERE show_status = 0";
-                        $result = mysqli_query($link, $sql);
-
-                        while($row = mysqli_fetch_array($result)){
-                            echo "<div class=\"category-item\">";
-                            echo "<div class=\"col-3\">";
-                            echo "<h4>".$row['show_title']."</h4>";
-                            echo "</div>";
-                            echo "<div class=\"col-1\">";
-                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
-                            echo "</div>";
-                            echo "<div class=\"col-1\">";
-                            echo "<a href=\"updateShowStats.php?showID=".$row['show_id']."\">WATCH</a>";
-                            echo "</div>";
-                            echo "</div>";
-                        }
+                        displayShowTitles($sql, $link, "WATCH", "updateShowStats");
                     ?>
                 </div>
                 <div class="category-block">
@@ -92,21 +96,7 @@
 
                     <?php
                         $sql = "SELECT * FROM watchlist WHERE show_status = 1";
-                        $result = mysqli_query($link, $sql);
-
-                        while($row = mysqli_fetch_array($result)){
-                            echo "<div class=\"category-item\">";
-                            echo "<div class=\"col-3\">";
-                            echo "<h4>".$row['show_title']."</h4>";
-                            echo "</div>";
-                            echo "<div class=\"col-1\">";
-                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
-                            echo "</div>";
-                            echo "<div class=\"col-1\">";
-                            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">FINISHED</a>";
-                            echo "</div>";
-                            echo "</div>";
-                        }
+                        displayShowTitles($sql, $link, "FINISHED", "dropShow");
                     ?>
                 </div>
             </div>
