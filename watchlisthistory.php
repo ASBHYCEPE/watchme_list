@@ -1,3 +1,19 @@
+<?php
+    require_once "config.php";
+
+    //Reads data from the database and display all queried results
+    function displayShowTitles($sql, $link){
+        $result = mysqli_query($link, $sql);
+        while($row = mysqli_fetch_array($result)){
+            echo "<div class=\"category-item\">";
+            echo "<div class=\"col-4\">";
+            echo "<h4>".$row['show_title']."</h4>";
+            echo "</div>";
+            echo "</div>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,11 +56,19 @@
                     <div class="category-title">
                         <h2>DROPPED SHOWS</h2>
                     </div>
+                    <?php
+                        $sql = "SELECT * FROM watchlist WHERE show_status = 3";
+                        displayShowTitles($sql, $link);
+                    ?>
                 </div>
                 <div class="category-block">
                     <div class="category-title">
                         <h2>FINISHED WATCHING</h2>
                     </div>
+                    <?php
+                        $sql = "SELECT * FROM watchlist WHERE show_status = 2";
+                        displayShowTitles($sql, $link);
+                    ?>
                 </div>
             </div>
     </body>
