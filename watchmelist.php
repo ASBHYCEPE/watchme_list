@@ -27,7 +27,7 @@
     }
 
     //Reads data from the database and display all queried results
-    function displayShowTitles($sql, $link, $label, $phpFileName){
+    function displayShowTitles($sql, $link, $label, $isWatching){
         $result = mysqli_query($link, $sql);
         while($row = mysqli_fetch_array($result)){
             echo "<div class=\"category-item\">";
@@ -35,10 +35,14 @@
             echo "<h4>".$row['show_title']."</h4>";
             echo "</div>";
             echo "<div class=\"col-1\">";
-            echo "<a href=\"dropShow.php?showID=".$row['show_id']."\">DROP</a>";
+            echo "<a href=\"updateShowstats.php?showID=".$row['show_id']."&showStats=3\">DROP</a>";
             echo "</div>";
             echo "<div class=\"col-1\">";
-            echo "<a href=\"".$phpFileName.".php?showID=".$row['show_id']."\">".$label."</a>";
+            if($isWatching){
+                echo "<a href=\"updateShowstats.php?showID=".$row['show_id']."&showStats=2\">".$label."</a>";
+            }else{
+                echo "<a href=\"updateShowstats.php?showID=".$row['show_id']."&showStats=1\">".$label."</a>";
+            }
             echo "</div>";
             echo "</div>";
         }
@@ -88,7 +92,7 @@
 
                     <?php
                         $sql = "SELECT * FROM watchlist WHERE show_status = 0";
-                        displayShowTitles($sql, $link, "WATCH", "updateShowStats");
+                        displayShowTitles($sql, $link, "WATCH", false);
                     ?>
                 </div>
                 <div class="category-block">
@@ -98,7 +102,7 @@
 
                     <?php
                         $sql = "SELECT * FROM watchlist WHERE show_status = 1";
-                        displayShowTitles($sql, $link, "FINISHED", "dropShow");
+                        displayShowTitles($sql, $link, "FINISHED", true);
                     ?>
                 </div>
             </div>
