@@ -18,30 +18,30 @@ header{
     padding: 10px;
 }
 
-#title-wrapper{
+#header-wrapper{
     width: 70%;
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin: 0 auto;
 }
 
-#title-wrapper #logo{
+#header-wrapper #logo{
     display: flex;
     align-items: center;
 }
 
-#title-wrapper #nav{
+#header-wrapper #nav{
     display: flex;
     align-items: center;
 }
 
-#title-wrapper #nav a{
+#header-wrapper #nav a{
     padding: 10px;
     color: white;
     text-decoration: none;
 }
 
-#title-wrapper #nav a:hover{
+#header-wrapper #nav a:hover{
     padding: 10px;
     border-radius: 10px;
     background-color: #27ae60;
@@ -101,7 +101,7 @@ form > div{
     padding: 10px;
 }
 
-#title-wrapper h1{
+#header-wrapper h1{
     color: white;
     padding-left: 20px;
 }

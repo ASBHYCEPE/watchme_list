@@ -11,7 +11,7 @@
     </head>
     <body>
     <header>
-            <div id="title-wrapper">
+            <div id="header-wrapper">
                 <div id="logo">
                     <div class="logo-item">
                         <img src="img/logo.png" id="img-logo" alt="eye logo">
@@ -27,6 +27,7 @@
             </div>
         </header>
         <div id="container">
+
             <div id="category-container">
                 <div class="category-block">
                     <div class="category-title">
