@@ -63,8 +63,18 @@
     <body>
         <header>
             <div id="title-wrapper">
-                <img src="img/logo.png" id="logo" alt="eye logo">
-                <h1>WATCHME <span style="color: #27ae60">LIST</span></h1>
+                <div id="logo">
+                    <div class="logo-item">
+                        <img src="img/logo.png" id="img-logo" alt="eye logo">
+                    </div>
+                    <div class="logo-item">
+                        <h1>WATCHME <span style="color: #27ae60">LIST</span></h1>
+                    </div>
+                </div>
+                <div id="nav">
+                    <a href="watchmelist.php">HOME</a>
+                    <a href="watchmelist.php">WATCHLIST HISTORY</a>
+                </div>
             </div>
         </header>
         <div id="container">
