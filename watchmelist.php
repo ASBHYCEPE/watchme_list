@@ -73,7 +73,7 @@
                 </div>
                 <div id="nav">
                     <a href="watchmelist.php">HOME</a>
-                    <a href="watchmelist.php">WATCHLIST HISTORY</a>
+                    <a href="watchlisthistory.php">WATCHLIST HISTORY</a>
                 </div>
             </div>
         </header>
