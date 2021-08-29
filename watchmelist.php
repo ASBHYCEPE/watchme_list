@@ -72,6 +72,8 @@
                     <select name="showCategory" >
                         <option value=0>PLANNING</option>
                         <option value=1>WATCHING</option>
+                        <option value=2>FINISHED</option>
+                        <option value=3>DROPPED</option>
                     </select>
                 </div>
                 <div class="col-1">
