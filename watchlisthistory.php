@@ -32,7 +32,7 @@
                     <h1>YOUR PAST SHOWS</h1>
                 </div>
                 <div class="block-item">
-
+                    <a href="clearHistory.php">CLEAR ALL SHOWS</a>
                 </div>
             </div>
             <div id="category-container">

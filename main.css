@@ -53,13 +53,32 @@ header{
 }
 
 #block{
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     padding: 10px;
 }
 
+#block .block-item{
+    padding-left: 10px;
+}
+
+#block .block-item a{
+    outline: none;
+    padding: 10px;
+    color: white;
+    margin-left: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #27ae60;
+}
+
+#block .block-item a:hover{
+    background-color: #27ae71;
+}
+
 #block h1{
     color: white;
-    margin-left: 3px;
 }
 
 input[type="text"]{
