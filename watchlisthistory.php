@@ -27,7 +27,14 @@
             </div>
         </header>
         <div id="container">
+            <div id="block">
+                <div class="block-item">
+                    <h1>YOUR PAST SHOWS</h1>
+                </div>
+                <div class="block-item">
 
+                </div>
+            </div>
             <div id="category-container">
                 <div class="category-block">
                     <div class="category-title">
