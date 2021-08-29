@@ -20,9 +20,31 @@ header{
 
 #title-wrapper{
     width: 70%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+}
+
+#title-wrapper #logo{
     display: flex;
     align-items: center;
-    margin: 0 auto;
+}
+
+#title-wrapper #nav{
+    display: flex;
+    align-items: center;
+}
+
+#title-wrapper #nav a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#title-wrapper #nav a:hover{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #27ae60;
 }
 
 #container{
@@ -84,7 +106,7 @@ form > div{
     padding-left: 20px;
 }
 
-#logo{
+#img-logo{
     width: 100px;
     height: 50px;
 }
